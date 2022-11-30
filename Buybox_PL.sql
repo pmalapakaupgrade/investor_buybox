@@ -8,7 +8,7 @@ sum(case when
         and l.term in (24, 36, 48, 60, 66, 72, 84)
         and (decisioning.at20s >= 36 or decisioning.at20s <0 or decisioning.at20s is null) --min credit history
         and br.state <> 'MAINE' 
-        then la.amount end) as Santander,
+        then la.amount end) as Santander_,
 sum(case when 
         l.segment in ('PRIME_PLUS', 'PRIME') 
         and l.decisioning_primary_fico_score >= 660 
